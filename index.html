@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+   <head>
+      <title></title>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+      <script type="text/javascript" src="controller.js"></script>
+   </head>
+   <body>
+      <div ng-controller="TarefasController">
+         <h1>My To Do List</h1>
+         <textarea rows="5" ng-model="descricao" id="areaTexto"></textarea>
+         <button ng-click="adicionarTarefa()">Salvar</button>
+         <button ng-click="imprimirList()">imprimir</button>
+         <hr>
+         <h1> Minhas Tarefas</h1>
+         <ul>
+            <li ng-repeat="tarefa in listTarefas">{{tarefa}}</li>
+         </ul>
+      </div>
+   </body>
+</html>
